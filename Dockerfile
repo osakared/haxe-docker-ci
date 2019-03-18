@@ -1,12 +1,11 @@
-FROM ubuntu:18.04
+FROM ubuntu:18.10
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install Node.js
 RUN apt-get update
 RUN apt-get install --yes curl gnupg2
-RUN curl --silent --location https://deb.nodesource.com/setup_6.x | bash -
-RUN apt-get install --yes nodejs npm
+RUN apt-get install --yes nodejs npm git
 RUN apt-get install --yes build-essential software-properties-common python-pycurl python-apt
 RUN add-apt-repository ppa:openjdk-r/ppa --yes && apt-get update && apt-get install -y --no-install-recommends openjdk-8-jdk
 RUN LC_ALL=C.UTF-8  add-apt-repository --yes ppa:ondrej/php && apt-get update && apt-get install -y --no-install-recommends php7.1 php7.1-mbstring 
