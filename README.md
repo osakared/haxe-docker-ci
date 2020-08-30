@@ -5,7 +5,7 @@ This is a docker image I made for doing ci. See [example](https://gitlab.com/hax
 ```bash
 docker build .
 docker tag b82c4923fb27 osakared/haxe-ci # use docker image list to get image id
-docker push osakared/haxe-ci
+docker push osakared/haxe-ci # for haxe-ci or other depending on the image
 ```
 
 ## License
